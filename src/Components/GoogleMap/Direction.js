@@ -9,7 +9,7 @@ const location = {
     lat: 23.758427,
     lng: 90.411644,
 }
-const Direction = () => {
+const Direction = ({ origin, destination }) => {
 
     const [response, setResponse] = useState(null);
     const directionsCallback = (res) => {
@@ -34,8 +34,8 @@ const Direction = () => {
                         <DirectionsService
                             //  location how to you go  
                             options={{
-                                destination: 'gulshan 1',
-                                origin: 'mirpur',
+                                destination: destination,
+                                origin: origin,
                                 travelMode: 'DRIVING'
                             }}
 
